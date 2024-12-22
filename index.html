@@ -3,48 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Movie Recommendations</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-<h1>Movie Recommendation</h1>
-<p>Get personalized movie recommendations based on your mood!</p>
-</header>
-<div id="questionnaire">
-<h2>What's your mood today?</h2>
-<form id="moodForm">
-<label for="mood">Select your mood:</label>
-<select id="mood" name="mood">
-<option value="happy">Happy</option>
-<option value="sad">Sad</option>
-<option value="adventure">Adventure</option>
-<option value="romantic">Romantic</option>
-<option value="thriller">Thriller</option>
+<h1 id="title">Movie Recommendations</h1>
+<div class="controls">
+<select id="genre">
+<option value="28">Action</option>
+<option value="35">Comedy</option>
+<option value="18">Drama</option>
+<option value="878">Sci-Fi</option>
+<option value="27">Horror</option>
+<option value="10749">Romance</option>
 </select>
-<label for="genre">Preferred Genre:</label>
-<select id="genre" name="genre">
-<option value="action">Action</option>
-<option value="comedy">Comedy</option>
-<option value="drama">Drama</option>
-<option value="horror">Horror</option>
-<option value="animation">Animation</option>
-</select>
-<label for="platform">Preferred Platform:</label>
-<select id="platform" name="platform">
+<select id="platform">
 <option value="netflix">Netflix</option>
-<option value="amazon">Amazon Prime</option>
+<option value="primevideo">Amazon Prime</option>
 <option value="disneyplus">Disney+</option>
+<option value="hulu">Hulu</option>
 </select>
-<button type="button" id="getRecommendations">Get Recommendations</button>
-</form>
+<button id="recommendButton">Get Recommendations</button>
+<button id="darkModeToggle">Toggle Dark Mode</button>
 </div>
-<div id="loading" style="display:none;">Loading...</div>
-<div id="movieResults"></div>
-<footer>
-<p>&copy; 2024 Movie Recommendations</p>
-</footer>
-<script src="script.js"></script>
+</header>
+<main>
+<div id="recommendations"></div>
+</main>
+<script src="app.js"></script>
 </body>
 </html>
